@@ -21,3 +21,19 @@ function realizarOperacion(num1, num2, operacion) {
         return "Error: Operación no válida.";
     }
 }
+
+// Paso 4: Bucle para realizar múltiples operaciones
+while (true) {
+    operacion = prompt("Ingrese la operación a realizar (suma, resta, multiplicacion, division) o 'salir' para terminar:");
+
+    if (operacion.toLowerCase() === "salir") {
+        console.log("Gracias por usar la calculadora. ¡Hasta luego!");
+        break;
+    }
+
+    num1 = parseFloat(prompt("Ingrese el primer número:"));
+    num2 = parseFloat(prompt("Ingrese el segundo número:"));
+
+    let resultado = realizarOperacion(num1, num2, operacion);
+    console.log("Resultado:", resultado);
+}
